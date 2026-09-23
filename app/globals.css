@@ -1,0 +1,24 @@
+:root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f6f7f2; color: #17231e; }
+.shell { max-width: 780px; margin: 0 auto; padding: 80px 24px 96px; }
+.eyebrow { color: #2e755c; font-size: 12px; font-weight: 800; letter-spacing: .16em; }
+h1 { max-width: 690px; margin: 20px 0; font-size: clamp(36px, 6vw, 60px); line-height: 1.07; letter-spacing: -.045em; }
+.intro { max-width: 610px; color: #516158; font-size: 19px; line-height: 1.6; }
+.snapshot { margin: 42px 0 24px; padding: 30px; border: 1px solid #c8d9cc; border-radius: 18px; background: #eaf4ec; box-shadow: 0 12px 35px #182b1910; }
+.snapshot-header { display: flex; align-items: center; gap: 9px; color: #24664c; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
+.live-dot { width: 9px; height: 9px; border-radius: 50%; background: #2d9f6b; }
+.snapshot h2 { margin: 22px 0; font-size: 25px; line-height: 1.25; }
+.server-note { margin-bottom: 24px; padding: 16px 18px; border-radius: 10px; background: #fff; }
+.server-note h3 { margin: 0 0 6px; font-size: 16px; }
+.server-note p { margin: 0; color: #516158; line-height: 1.5; }
+dl { display: grid; gap: 18px; margin: 0; }
+dl div { display: grid; grid-template-columns: 135px 1fr; gap: 12px; border-top: 1px solid #ccdfd0; padding-top: 17px; }
+dt { color: #597267; } dd { margin: 0; font-weight: 700; } .request-id { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.reload { display: inline-flex; gap: 15px; align-items: center; padding: 13px 19px; border-radius: 9px; background: #1b5b43; color: white; text-decoration: none; font-weight: 700; }
+.reload:hover { background: #114330; }
+.explanation { margin-top: 64px; border-top: 1px solid #d9dfd9; padding-top: 25px; line-height: 1.65; color: #435149; }
+.explanation h2 { margin-top: 0; color: #17231e; font-size: 23px; }
+.explanation ol { padding-left: 22px; } .explanation li { margin: 8px 0; }
+code { padding: 2px 5px; border-radius: 4px; background: #e7ebe5; font-size: .91em; }
+@media (max-width: 520px) { .shell { padding-top: 48px; } .snapshot { padding: 23px; } dl div { grid-template-columns: 1fr; gap: 3px; } }
