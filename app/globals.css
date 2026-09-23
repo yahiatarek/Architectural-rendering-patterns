@@ -5,7 +5,15 @@ body { margin: 0; background: #f6f7f2; color: #17231e; }
 .eyebrow { color: #2e755c; font-size: 12px; font-weight: 800; letter-spacing: .16em; }
 h1 { max-width: 690px; margin: 20px 0; font-size: clamp(36px, 6vw, 60px); line-height: 1.07; letter-spacing: -.045em; }
 .intro { max-width: 610px; color: #516158; font-size: 19px; line-height: 1.6; }
+.dev-notice { margin: 22px 0 0; padding: 14px 17px; border: 1px solid #d9bb72; border-radius: 9px; background: #fff5d8; line-height: 1.5; }
+.mode-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.mode-nav a { padding: 10px 14px; border: 1px solid #c8d9cc; border-radius: 8px; color: #1b5b43; text-decoration: none; font-weight: 700; }
+.mode-nav a[aria-current="page"] { background: #1b5b43; border-color: #1b5b43; color: #fff; }
 .snapshot { margin: 42px 0 24px; padding: 30px; border: 1px solid #c8d9cc; border-radius: 18px; background: #eaf4ec; box-shadow: 0 12px 35px #182b1910; }
+.snapshot-static { background: #edf0fa; border-color: #cdd3e8; }
+.snapshot-static .snapshot-header { color: #414c89; }
+.snapshot-static .live-dot { background: #6777c8; }
+.snapshot-static dl div { border-color: #d4d9ee; }
 .snapshot-header { display: flex; align-items: center; gap: 9px; color: #24664c; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
 .live-dot { width: 9px; height: 9px; border-radius: 50%; background: #2d9f6b; }
 .snapshot h2 { margin: 22px 0; font-size: 25px; line-height: 1.25; }

@@ -8,9 +8,9 @@ export default async function ServerSnapshot({ renderedAt, requestId }: { render
     <section className="snapshot" aria-labelledby="snapshot-heading">
       <div className="snapshot-header">
         <span className="live-dot" aria-hidden="true" />
-        <span>Antwort vom Server</span>
+        <span>SSR · pro Anfrage erzeugt</span>
       </div>
-      <h2 id="snapshot-heading">Dieser Inhalt entstand auf dem Server.</h2>
+      <h2 id="snapshot-heading">Dieser Inhalt entstand für deine Anfrage.</h2>
       <div className="server-note">
         <h3>{note.title}</h3>
         <p>{note.message}</p>

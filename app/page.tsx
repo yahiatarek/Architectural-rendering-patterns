@@ -17,6 +17,11 @@ export default async function Home() {
         wie Zeit und Request-ID wechseln.
       </p>
 
+      <nav className="mode-nav" aria-label="Rendering-Muster">
+        <a href="/" aria-current="page">SSR · pro Anfrage</a>
+        <a href="/ssg">SSG · beim Build</a>
+      </nav>
+
       <ServerSnapshot renderedAt={renderedAt} requestId={requestId} />
 
       <a className="reload" href="/">Seite neu laden <span aria-hidden="true">↗</span></a>
@@ -24,8 +29,9 @@ export default async function Home() {
       <section className="explanation" aria-labelledby="explanation-heading">
         <h2 id="explanation-heading">So kannst du es prüfen</h2>
         <ol>
-          <li>Starte die App mit <code>npm run dev</code> und öffne <code>localhost:3000</code>.</li>
+          <li>Führe <code>npm run build</code> und danach <code>npm run start</code> aus.</li>
           <li>Lade die Seite neu: Zeit und Request-ID ändern sich.</li>
+          <li>Wechsle im Produktionsmodus zu <code>/ssg</code>: Dort bleiben Zeit und Build-ID gleich.</li>
           <li>Öffne „Seitenquelltext anzeigen“: Die Werte stehen bereits im HTML.</li>
           <li>Sieh ins Terminal: Dort erscheint die zugehörige Server-Ausgabe.</li>
         </ol>

@@ -1,0 +1,50 @@
+import { getLearningNote } from "../lib/server-data";
+import RandomNumberLive from "./randomNumberLive.component";
+
+export default async function SSGSnapshot({ renderedAt, buildId, isDevelopment }: { renderedAt: Date; buildId: string; isDevelopment: boolean }) {
+  const note = await getLearningNote();
+
+  return (
+    <section className="snapshot snapshot-static" aria-labelledby="snapshot-heading">
+      <div className="snapshot-header">
+        <span className="live-dot" aria-hidden="true" />
+        <span>{isDevelopment ? "Dev-Modus · neu gerendert" : "SSG · beim Build erzeugt"}</span>
+      </div>
+      <h2 id="snapshot-heading">
+        {isDevelopment ? "Dieser Inhalt entstand im Dev-Modus." : "Dieser Inhalt entstand beim Build."}
+      </h2>
+      <div className="server-note">
+        <h3>{note.title}</h3>
+        <p>{note.message}</p>
+      </div>
+      <dl>
+        <div>
+          <dt>Cookies im Request</dt>
+          <dd>Beim Build nicht verfügbar
+            weil SSG keine Request-Daten lesen kann.
+          </dd>
+        </div>
+        <div>
+          <dt>Gerendert um</dt>
+          <dd>
+            <time dateTime={renderedAt.toISOString()}>
+              {renderedAt.toLocaleString("de-DE", {
+                timeZone: "Africa/Cairo",
+                dateStyle: "medium",
+                timeStyle: "medium",
+              })} {"(Kairo)"}
+            </time>
+          </dd>
+        </div>
+        <div>
+          <dt>API-Zahl im Browser</dt>
+          <RandomNumberLive />
+        </div>
+        <div>
+          <dt>{isDevelopment ? "Dev-Render-ID" : "Build-ID"}</dt>
+          <dd className="request-id">{buildId}</dd>
+        </div>
+      </dl>
+    </section>
+  );
+}
