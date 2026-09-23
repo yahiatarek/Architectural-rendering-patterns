@@ -38,6 +38,7 @@ export default async function SSGSnapshot({ renderedAt, buildId, isDevelopment }
         </div>
         <div>
           <dt>API-Zahl im Browser</dt>
+          <dd>Dieser Zahl wird im Browser geladen und nach der nächsten Minutengrenze aktualisiert.</dd>
           <RandomNumberLive />
         </div>
         <div>
