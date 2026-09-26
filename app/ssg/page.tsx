@@ -29,6 +29,7 @@ export default function SSGPage() {
       <nav className="mode-nav" aria-label="Rendering-Muster">
         <a href="/">SSR · pro Anfrage</a>
         <a href="/ssg" aria-current="page">SSG · beim Build</a>
+        <a href="/progressive-hydration">Progressive Hydration</a>
       </nav>
 
       <SSGSnapshot renderedAt={renderedAt} buildId={buildId} isDevelopment={isDevelopment} />

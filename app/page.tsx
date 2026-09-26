@@ -20,6 +20,7 @@ export default async function Home() {
       <nav className="mode-nav" aria-label="Rendering-Muster">
         <a href="/" aria-current="page">SSR · pro Anfrage</a>
         <a href="/ssg">SSG · beim Build</a>
+        <a href="/progressive-hydration">Progressive Hydration</a>
       </nav>
 
       <ServerSnapshot renderedAt={renderedAt} requestId={requestId} />

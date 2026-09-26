@@ -26,6 +26,7 @@ export default function ISRPage() {
         <a href="/">SSR · pro Anfrage</a>
         <a href="/ssg">SSG · beim Build</a>
         <a href="/isr" aria-current="page">ISR · nach Revalidierung</a>
+        <a href="/progressive-hydration">Progressive Hydration</a>
       </nav>
 
       <ISRSnapshot isDevelopment={isDevelopment} />
